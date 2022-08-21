@@ -1,0 +1,15 @@
+{
+  "extends": ["@antfu/eslint-config"],
+  "overrides": [
+    {
+      "files": ["*.js", "*.ts", "*.vue"],
+        "rules": {
+          "@typescript-eslint/comma-dangle": "off",
+          "@typescript-eslint/semi": "off",
+          "comma-dangle": "off",
+          "semi": "off",
+          "eol-last": "off"
+        }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+@use '../vars' as vars;
+$--colors: (
+  "primary": (
+    "base": vars.$indigo-500,
+  ),
+  "success": (
+    "base": vars.$emerald-500,
+  ),
+  "warning": (
+    "base": vars.$amber-500,
+  ),
+  "danger": (
+    "base": vars.$pink-500,
+  ),
+  "error": (
+    "base": vars.$pink-500,
+  ),
+  "info": (
+    "base": vars.$sky-500,
+  ),
+);
+
+@forward "element-plus/theme-chalk/src/dark/var.scss" with (
+  $colors: $--colors
+);

@@ -1,0 +1,52 @@
+// @use "./element/index.scss" as *;
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  @apply bg-gray-100 text-slate-800;
+  &.dark {
+    @apply bg-slate-800 text-gray-100;
+    & body {
+      // Override any element UI css variables for dark mode here
+      --el-bg-color-overlay: theme('colors.slate.800');
+      --el-bg-color: theme('colors.slate.900');
+      --el-bg-color-page: theme('colors.slate.800');
+    }
+  }
+}
+
+i {
+  display: inline-block;
+}
+
+a {
+  color: var(--ep-color-primary);
+}
+
+code {
+  border-radius: 2px;
+  padding: 2px 4px;
+  background-color: var(--ep-color-primary-light-9);
+  color: var(--ep-color-primary);
+}
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: theme('colors.indigo.700');
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}

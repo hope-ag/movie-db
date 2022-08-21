@@ -1,0 +1,16 @@
+{
+  "endOfLine": "auto",
+  "htmlWhitespaceSensitivity": "css",
+  "singleAttributePerLine": true,
+  "useTabs": false,
+  "indentSize": 2,
+  "indentStyle": "space",
+  "insertFinalNewline": true,
+  "trimTrailingWhitespace": true,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": true,
+  "arrowParens": "avoid",
+  "bracketSameLine": true
+}
