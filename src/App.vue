@@ -1,15 +1,24 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
+import { onMounted } from 'vue';
 import NavBar from './components/NavBar.vue'
-const route = useRoute()
+
+import { useCoreStore } from '~/stores/core'
+
+const { getAppConfig, config } = useCoreStore();
+
+onMounted(async() => {
+  if (!Object.keys(config).length)
+    await getAppConfig()
+})
+
 </script>
 
 <template>
   <NavBar />
-  <router-view v-slot="{ Component }" :key="route.path">
+  <router-view v-slot="{ Component, route }">
     <suspense>
       <template #default>
-        <component :is="Component" />
+        <component :is="Component" :key="route.fullPath" />
       </template>
       <template #fallback>
         <div>Loading...</div>
