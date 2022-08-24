@@ -1,14 +1,14 @@
 <script
   setup
   lang="ts">
-import { searchMovies } from '~/services/http-service'
+import { searchMovies } from '~/services/httpService';
 
-const { isFetching } = await searchMovies('batman', 'movie', {});
+const { isLoading } = await searchMovies('batman', 'movie', {});
 </script>
 
 <template>
   <div>Home</div>
   <suspense>
-    <p>Loading: {{ isFetching }}</p>
+    <p>Loading: {{ isLoading }}</p>
   </suspense>
 </template>
