@@ -11,7 +11,7 @@ export const useCoreStore = defineStore('core', () => {
 
   async function getAppConfig() {
     const { data } = await getConfiguration()
-    config.value = data
+    config.value = data.value
   }
 
   return {
